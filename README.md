@@ -1,6 +1,10 @@
-# discounttour
+![Flutter Travel App Ui Design](https://user-images.githubusercontent.com/55942632/79043685-4c593800-7c1e-11ea-813a-cc6e17ba6217.png)
 
-A new Flutter project.
+# Discount Tour
+
+Trave App Made with Flutter.
+
+Build the UI with me https://youtu.be/PKEam1KpeWk
 
 ## Getting Started
 
