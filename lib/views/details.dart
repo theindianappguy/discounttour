@@ -245,17 +245,17 @@ class DetailsCard extends StatelessWidget {
           Row(
             children: [
               Container(
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     color: Color(0xffD5E6F2),
                     borderRadius: BorderRadius.circular(10)),
                 child: Image.asset(
                   "assets/card1.png",
-                  height: 30,
+                  height: 25,
                 ),
               ),
               SizedBox(
-                width: 8,
+                width: 5,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -264,12 +264,12 @@ class DetailsCard extends StatelessWidget {
                     "Booking",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: Color(0xff5A6C64)),
                   ),
                   SizedBox(
-                    height: 6,
+                    height: 3,
                   ),
                   Text(
                     "8.0/10",
@@ -284,13 +284,13 @@ class DetailsCard extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 8,
+            height: 3,
           ),
           Text(
             " Based on 30 reviews",
             textAlign: TextAlign.center,
             style: TextStyle(
-                fontSize: 14,
+                fontSize: 13,
                 fontWeight: FontWeight.w600,
                 color: Color(0xff879D95)),
           ),
