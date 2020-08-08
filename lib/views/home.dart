@@ -13,6 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<PopularTourModel> popularTourModels = new List();
   List<CountryModel> country = new List();
+
   @override
   void initState() {
     country = getCountrys();
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         leading: Container(
-          padding: EdgeInsets.all(7),
+          padding: EdgeInsets.all(5),
           child: Image.asset(
             "assets/menu.png",
             height: 20,
@@ -167,15 +168,17 @@ class PopularTours extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)),
-              child: CachedNetworkImage(
-                imageUrl: imgUrl,
-                width: 110,
-                height: 90,
-                fit: BoxFit.cover,
+            Flexible(
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    bottomLeft: Radius.circular(20)),
+                child: CachedNetworkImage(
+                  imageUrl: imgUrl,
+                  width: 110,
+                  height: 90,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Container(
@@ -193,23 +196,26 @@ class PopularTours extends StatelessWidget {
                   SizedBox(
                     height: 3,
                   ),
-                  Text(
+                  Container(
+                      child: Text(
                     desc,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: Color(0xff89A097)),
-                  ),
+                  )),
                   SizedBox(
                     height: 6,
                   ),
                   Text(
                     price,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: Color(0xff4E6059)),
-                  )
+                  ),
                 ],
               ),
             ),
